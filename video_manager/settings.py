@@ -94,7 +94,7 @@ REST_FRAMEWORK = {
         'rest_framework.throttling.UserRateThrottle'
     ],
     'DEFAULT_THROTTLE_RATES': {
-        'anon': '6/hour',
+        'anon': f"{os.getenv('THROTTLE_ANNON', 6)}/hour", 
         'user': '300/hour'
     }
 

@@ -8,6 +8,7 @@ jobs:
       POSTGRES_DB: video
       POSTGRES_USER: video
       POSTGRES_PASSWORD: video
+      THROTTLE_ANNON: 100
       POSTGRES_HOST_AUTH_METHOD: trust
       DJANGO_SECRET_KEY: ${{ secrets.DJANGO_SECRET_KEY }}
       POSTGRES_HOST: localhost

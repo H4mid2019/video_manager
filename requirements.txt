@@ -1,0 +1,11 @@
+asgiref
+Django==3.2
+pytz
+sqlparse
+psycopg2
+djangorestframework
+gunicorn
+django-cors-headers
+django-redis
+djangorestframework-simplejwt
+django-redis

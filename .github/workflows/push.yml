@@ -18,9 +18,9 @@ jobs:
         ports:
           - 5432:5432
         env:
-          POSTGRES_DB: django
-          POSTGRES_USER: django
-          POSTGRES_PASSWORD: django
+          POSTGRES_DB: video
+          POSTGRES_USER: video
+          POSTGRES_PASSWORD: video
           POSTGRES_HOST_AUTH_METHOD: trust
         options: >-
           --health-cmd pg_isready

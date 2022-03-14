@@ -9,3 +9,4 @@ django-cors-headers
 django-redis
 djangorestframework-simplejwt
 django-redis
+python-magic

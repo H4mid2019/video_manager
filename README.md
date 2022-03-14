@@ -39,7 +39,7 @@ After the first time, you can remove the `build` switch. like: `docker-compose u
   
 ## Usage <a name = "usage"></a>
 
-By default, it listens on port 8000, so for calling the endpoints, you have to call `127.0.0.1:8000/api/<endpoint>`:
+By default, it listens on port 82, so for calling the endpoints, you have to call `127.0.0.1:82/api/<endpoint>`:
 It provides eleven endpoints. First, you must create a user, obtain a JWT access token, and refresh the token with that username and password.
 
 - /create_user `POST` with user parameters in the body of your request. e.g.:

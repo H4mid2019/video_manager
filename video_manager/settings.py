@@ -22,12 +22,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'django-insecure-*=6d$ug*6#b$$7s8=nsu*bdnor8mrj&+%phwr)90es4yf=%^3-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True if os.getenv('DEBUG', False) else False
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+CSRF_TRUSTED_ENV = os.getenv('CSRF_TRUSTED_ORIGINS', "http://127.0.0.1:82,http://localhost:82").split(',')
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "PATCH",
+    "POST",
+    "PUT",
+]
 
-ALLOWED_HOSTS = []
+
+CORS_ALLOWED_ORIGINS = os.getenv('CSRF_TRUSTED_ORIGINS', "http://127.0.0.1:82,http://localhost:82").split(',')
 
 AUTH_USER_MODEL = 'videos.User'
 # Application definition
@@ -103,6 +113,7 @@ REST_FRAMEWORK = {
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',

@@ -8,7 +8,7 @@
 
 ## About <a name = "about"></a>
 
-This repo is a simple video manager with Django3.2 and DRF, which JWT authentication requires for all video and user endpoints unless the creation and the JWT token getter.
+This repo is a simple video manager with Django and DRF, which JWT authentication requires for all video and user endpoints unless the creation and the JWT token getter.
 
 **_This library has been tested with GitHub Workflows._**
 
@@ -28,7 +28,7 @@ After the first time, you can remove the `build` switch. like: `docker-compose u
 ### Tech Stack
 
 - Python
-- Django3.2
+- Django
 - Django REST framework
 - Docker
 - Docker-compose

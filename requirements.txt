@@ -1,5 +1,5 @@
 asgiref
-Django==3.2
+Django
 pytz
 sqlparse
 psycopg2

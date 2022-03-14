@@ -20,3 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('videos.urls'))
 ]
+
+
+handler404 = 'videos.views.handler404'
